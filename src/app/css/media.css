@@ -117,6 +117,15 @@
         font-weight: 300;
         padding: 10px 0;
     }
+    .wrapper-trainers{
+        flex-direction: column;
+    }
+    .wrapper-trainers__foto{
+        height: 180px;
+        margin: 20px auto 10px;
+    }
+
+
 }
 @media screen and (max-width: 560px) {
     .main-site-bar__item a {

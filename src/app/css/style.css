@@ -30,6 +30,7 @@ html {
   padding-top: 10px;
   padding-bottom: 30px;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -495,6 +496,8 @@ label {
   margin: 0 auto;
   padding: 47px 15px 0;
   position: relative;
+  border-right: 1px solid;
+  border-left: 1px solid;
 }
 .main-site-bar {
   margin-bottom: 32px;
@@ -1040,6 +1043,35 @@ label {
   /* color: transparent; */
   background-color: #f8e4d4;
 }
-.div {
+.wrapper-trainers {
   display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.wrapper-trainers__foto {
+  width: 180px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wrapper-trainers__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.wrapper-trainers__paragraph {
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+.substrate-for-block-trainers {
+  display: flex;
+  flex-direction: column;
+  padding: 13px 17px 16px 13px;
+  border-radius: 5px;
+}
+.substrate-for-block-trainers a {
+  align-self: flex-end;
+  margin-top: auto;
+  margin-right: 15px;
 }
