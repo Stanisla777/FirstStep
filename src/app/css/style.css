@@ -401,16 +401,17 @@ label {
   z-index: 2;
 }
 .left-site-bar__list {
-  margin: 50px 0 0 57px;
+  margin: 44px 0 0 57px;
 }
 .left-site-bar__list a {
+  padding: 6px 0;
   font-size: 16px;
   color: #ffffff;
   font-weight: 200;
   text-transform: uppercase;
 }
-.left-site-bar__item:not(:last-child) {
-  margin-bottom: 12px;
+.left-site-bar__list a:hover {
+  color: #e0e0e0;
 }
 .wrapper-social-icon {
   display: flex;
@@ -467,6 +468,7 @@ label {
   align-items: center;
   width: 20%;
   max-width: 290px;
+  min-width: 160px;
   position: fixed;
   top: 12px;
   right: 66px;
@@ -496,6 +498,9 @@ label {
   border-right: 1px solid;
   border-left: 1px solid;
 }
+.main-site-bar__item:hover .main-site-bar__item :before {
+  color: red;
+}
 .main-site-bar {
   margin-bottom: 32px;
 }
@@ -523,7 +528,6 @@ label {
 }
 .main-site-bar__item :before {
   font-family: 'FontAwesoome', sans-serif;
-  color: #fff;
   margin-right: 6px;
 }
 .main-site-bar__item a {
@@ -531,6 +535,9 @@ label {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
+}
+.main-site-bar__item a:hover {
+  color: #e0e0e0;
 }
 .title {
   font-size: 25px;
@@ -541,13 +548,19 @@ label {
 }
 .main-content__banner {
   border-radius: 4px;
-  padding: 7px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.banner-all-page {
+.main-banner {
   width: 100%;
+  background-size: contain;
+}
+.main-banner::before {
+  content: "";
+  display: block;
+  padding-top: 10.52%;
+  /* С помощью этого padding мы задаем пропорцию высоты т ширины */
 }
 .wrapper-banner-flex {
   display: flex;
@@ -572,6 +585,8 @@ label {
 }
 .row-two-column {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -795,11 +810,14 @@ label {
 .program-schedule {
   margin-top: 14px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
 }
 .program-schedule__item {
   width: calc(20% - 30px);
+  min-width: 180px;
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 5px;
@@ -855,17 +873,36 @@ label {
   display: flex;
   align-items: center;
 }
+.row-two-column-authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row-two-column__col-authors {
+  position: relative;
+  width: calc(50% - 30px);
+  min-width: 350px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 .about-authors__img {
-  width: 235px;
-  height: 235px;
+  width: 46%;
+  max-width: 235px;
   margin-right: 44px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
+.about-authors__img:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
 .about-authors__description {
-  width: calc(100% - 235px - 44px);
+  flex-grow: 1;
   margin-top: 18px;
 }
 .about-authors__name {
@@ -926,18 +963,21 @@ label {
 }
 .footer {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 20px;
   padding-top: 19px;
   padding-bottom: 25px;
 }
 .footer__col-first {
   width: 24%;
+  min-width: 145px;
   margin-right: 8px;
 }
 .footer__col-first p:not(:first-child) {
   margin-top: 7px;
 }
 .footer__col-second {
+  min-width: 285px;
   width: 33%;
   margin-right: 24px;
 }
@@ -948,6 +988,7 @@ label {
   margin-top: 28px;
 }
 .footer__col-third {
+  min-width: 286px;
   margin-right: 6px;
 }
 .footer__col-third p:not(:first-child) {
@@ -976,31 +1017,4 @@ label {
   /* background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 99%); */
   /* color: transparent; */
   background-color: #f8e4d4;
-}
-@media screen and (max-width: 1380px) {
-  .left-site-bar {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-  }
-  .left-site-bar__list {
-    display: flex;
-  }
-  .left-site-bar__item {
-    margin: 0 10px;
-  }
-  .wrapper-admin {
-    position: relative;
-    margin: 10px auto;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .wrapper-admin__content {
-    text-align: center;
-    margin-right: 0;
-    margin-top: 10px;
-  }
-  .wrapper-admin__foto {
-    order: -1;
-  }
 }

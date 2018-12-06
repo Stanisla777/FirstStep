@@ -471,16 +471,20 @@ label {
   z-index: 2;
 
   &__list {
-    margin: 50px 0 0 57px;
-    a {
-      font-size: 16px;
-      color: #ffffff;
-      font-weight: 200;
-      text-transform: uppercase;
-    }
+      margin: 44px 0 0 57px;
+      a {
+          &:hover{
+              color: #e0e0e0;
+          }
+          padding: 6px 0;
+          font-size: 16px;
+          color: #ffffff;
+          font-weight: 200;
+          text-transform: uppercase;
+      }
   }
   &__item:not(:last-child) {
-    margin-bottom: 12px;
+    //margin-bottom: 12px;
   }
 }
 .wrapper-social-icon{
@@ -548,6 +552,7 @@ label {
     align-items: center;
     width: 20%;
     max-width: 290px;
+    min-width: 160px;
     position: fixed;
     top: 12px;
     right: 66px;
@@ -586,6 +591,10 @@ label {
     border-right: 1px solid;
     border-left: 1px solid;
 
+}
+
+.main-site-bar__item:hover .main-site-bar__item :before{
+    color: red;
 }
 .main-site-bar{
     margin-bottom: 32px;
@@ -627,11 +636,14 @@ label {
         :before{
 
             font-family: 'FontAwesoome',sans-serif;
-            color: #fff;
+            //color: #fff;
             margin-right: 6px;
             //font-size: 26px;
         }
         a{
+            &:hover{
+                color: #e0e0e0;
+            }
             text-transform: uppercase;
             color: #fff;
             font-size: 16px;
@@ -649,15 +661,21 @@ label {
 
 .main-content__banner{
     border-radius: 4px;
-    padding: 7px;
-
-
+    //padding: 7px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.banner-all-page{
+.main-banner{
     width: 100%;
+    //height: 120px;
+    background-size: contain;
+}
+
+.main-banner::before {
+    content: "";
+    display: block;
+    padding-top: 10.52%;; /* С помощью этого padding мы задаем пропорцию высоты т ширины */
 }
 .wrapper-banner-flex{
     display: flex;
@@ -684,13 +702,18 @@ label {
 
 .row-two-column{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-left: -15px;
     margin-right: -15px;
 
+    &__col{
 
+    }
     &__col{
         position: relative;
         width: calc(50% - 30px);
+        //min-width: 350px;
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -962,10 +985,13 @@ label {
 .program-schedule{
   margin-top: 14px;
   display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
   &__item{
     width: calc(20% - 30px);
+      min-width: 180px;
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 5px;
@@ -1020,24 +1046,45 @@ label {
     margin-top: 3px;
   }
 }
+
 .wrapper-about-authors{
   display: flex;
   //justify-content: space-between;
   align-items: center;
 
 }
+.row-two-column-authors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row-two-column__col-authors {
+    position: relative;
+    width: calc(50% - 30px);
+    min-width: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
 .about-authors__img{
-  width: 235px;
-  height: 235px;
+  //width: 235px;
+    width: 46%;
+    max-width: 235px;
   margin-right: 44px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
-
+.about-authors__img:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
 .about-authors__description{
-  width: calc(100% - 235px - 44px);
+  //width: calc(100% - 235px - 44px);
+    flex-grow: 1;
   margin-top: 18px;
 }
 .about-authors__name{
@@ -1104,17 +1151,20 @@ label {
 }
 .footer{
   display: flex;
+    flex-wrap: wrap;
   padding-left: 20px;
   padding-top: 19px;
   padding-bottom: 25px;
   &__col-first{
     width: 24%;
+      min-width: 145px;
     margin-right: 8px;
     p:not(:first-child){
       margin-top: 7px;
     }
   }
   &__col-second{
+      min-width: 285px;
     width: 33%;
     margin-right: 24px;
     p:not(:first-child){
@@ -1125,6 +1175,7 @@ label {
     }
   }
   &__col-third{
+      min-width: 286px;
     margin-right: 6px;
     p:not(:first-child){
       margin-top: 7px;
@@ -1172,32 +1223,203 @@ label {
 
 
 
-@media screen and (max-width: 1380px){
-    .left-site-bar{
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-    }
-    .left-site-bar__list{
-        display: flex;
-    }
-    .left-site-bar__item{
-        margin: 0 10px;
-    }
 
-    .wrapper-admin{
-        position: relative;
-        margin: 10px auto;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .wrapper-admin__content{
-        text-align: center;
-        margin-right: 0;
-        margin-top: 10px;
-    }
-    .wrapper-admin__foto{
-        order: -1;
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@media screen and (max-width: 1860px) and (min-width: 1630px) {/*Для всех страниц*/
+//    .site-logo {
+//        width: 170px;
+//    }
+//    .left-site-bar__list {
+//        margin: 50px 0 0 0px;
+//    }
+//}
+//
+//
+//@media screen and (max-width: 1630px) {
+//    .left-site-bar {
+//        position: relative;
+//        width: 100%;
+//        max-width: 100%;
+//    }
+//    .left-site-bar__list {
+//        display: flex;
+//        margin-left: -296.695px;
+//        margin-top: 0;
+//        top: 175px;
+//        position: fixed;
+//        left: 50%;
+//        background-color: rgba(0, 0, 0, 0.4);
+//        border-radius: 4px;
+//    }
+//    .left-site-bar__item {
+//        margin: 0 10px;
+//    }
+//    .wrapper-admin {
+//        position: relative;
+//        margin: 30px auto;
+//        justify-content: center;
+//        flex-direction: column;
+//        top: 0;
+//        right: 0;
+//    }
+//    .wrapper-admin__content {
+//        text-align: center;
+//        margin-right: 0;
+//        margin-top: 10px;
+//    }
+//    .wrapper-admin__foto {
+//        order: -1;
+//    }
+//    .left-site-bar{
+//        height: auto;
+//        left: 0;
+//    }
+//    .site-logo{
+//        margin: 0 auto;
+//    }
+//    .wrapper-social-icon{
+//        align-self: center;
+//        margin-bottom: 70px;
+//        margin-top: 10px;
+//    }
+//
+//}
+//
+//@media screen and (max-width: 1070px){
+//    .about-authors__name{
+//        font-size: 20px;
+//    }
+//    .about-authors__img{
+//        width: 35%;
+//        //margin-right: 0;
+//    }
+//    .substrate-for-authors{
+//        padding: 20px 20px 43px 20px;
+//    }
+//    //.wrapper-about-authors {
+//    //    display: flex;
+//    //    align-items: center;
+//    //    flex-direction: column;
+//    //}
+//}
+//
+//@media screen and (max-width: 800px){
+//    .row-two-column__col-authors{
+//        margin-bottom: 10px;
+//    }
+//    .substrate-authors{
+//        flex-direction: column;
+//    }
+//    .substrate-authors-col-left, .substrate-authors-col-right{
+//        width: 100%;
+//    }
+//    .substrate-authors-col-left{
+//        margin-bottom: 15px;
+//    }
+//}
+//
+//
+//
+//
+//
+//@media screen and (max-width: 780px){
+//    .row-two-column__col{
+//        margin-bottom: 10px;
+//    }
+//    .banner-about-method{
+//        content: "";
+//        display: block;
+//        padding-top: 28.52%;
+//    }
+//
+//
+//    .row-two-column__col {
+//        width: calc(100% - 30px);
+//    }
+//}
+//
+//@media screen and (max-width: 670px){
+//    .left-site-bar__list a{
+//        font-size: 9px;
+//    }
+//    .left-site-bar__item {
+//        margin: 0 6px;
+//    }
+//    .left-site-bar__list{
+//        top: 181px;
+//    }
+//    .program-schedule__item{
+//        //flex-grow: 1;
+//    }
+//
+//}
+//@media screen and (max-width: 580px){
+//    .program-schedule__item{
+//        flex-grow: 1;
+//    }
+//}
+//@media screen and (max-width: 560px){
+//    .main-site-bar__item a {
+//        text-transform: uppercase;
+//        color: #fff;
+//        font-size: 10px;
+//        font-weight: 300;
+//    }
+//
+//    .main-site-bar__item:not(:last-child) {
+//        margin-right: 8px;
+//    }
+//    .main-content {
+//
+//        padding: 0 15px 0;
+//
+//    }
+//}
+//@media screen and (max-width: 500px){
+//    .program-schedule__item{
+//        flex-grow: 1;
+//    }
+//}
+//
+//@media screen and (max-width: 420px){
+//    .title{
+//        font-size: 22px;
+//    }
+//}
+//
+//@media screen and (max-width: 1160px){
+//
+//}
+//@media screen and (max-width: 1860px){
+//    .program-schedule__item{
+//        width: calc(26% - 30px);
+//        margin-bottom: 10px;
+//    }
+//}
+
