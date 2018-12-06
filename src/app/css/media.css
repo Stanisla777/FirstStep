@@ -142,11 +142,24 @@
         font-size: 22px;
     }
 }
+
+
 @media screen and (max-width: 1860px) {
     .program-schedule__item {
-        width: calc(26% - 30px);
+        width: calc(25% - 30px);
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 930px) {
+    .program-schedule__item {
+        width: calc(33% - 30px);
         margin-bottom: 10px;
     }
 }
 
-
+@media screen and (max-width: 710px) {
+    .program-schedule__item {
+        width: calc(50% - 30px);
+        margin-bottom: 10px;
+    }
+}
