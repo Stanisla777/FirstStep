@@ -1076,12 +1076,15 @@ label {
   margin-right: 15px;
 }
 .wrapper-blog {
+  margin-bottom: 22px;
   background-color: rgba(232, 232, 232, 0.5);
   border-radius: 5px;
 }
 .wrapper-blog__header {
   display: flex;
-  padding: 13px 18px 13px 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px 4px 18px;
   border-bottom: 1px solid #ffffff;
 }
 .wrapper-blog__title {
@@ -1091,16 +1094,109 @@ label {
 }
 .wrapper-blog__admin {
   display: flex;
-}
-.wrapper-admin {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
-  width: 20%;
   max-width: 290px;
   min-width: 160px;
-  position: fixed;
-  top: 12px;
-  right: 66px;
-  z-index: 2;
+}
+.wrapper-blog__admin-content {
+  font-size: 14px;
+  text-align: right;
+  margin-right: 19px;
+  margin-top: -5px;
+  line-height: 21px;
+}
+.wrapper-blog__foto {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.wrapper-blog__content {
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 9px 10px 18px;
+}
+.wrapper-blog__block-img {
+  flex-shrink: 0;
+}
+.wrapper-blog__block-description {
+  margin-left: 30px;
+}
+.wrapper-blog p {
+  line-height: 19px;
+}
+.wrapper-blog .block-img {
+  width: 245px;
+  height: 195px;
+}
+.wrapper-blog__footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff;
+  padding: 13px 32px 14px 67px;
+  margin-top: 8px;
+}
+.wrapper-blog__button {
+  margin-left: auto;
+}
+.wrapper-admin__content {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 19px;
+  margin-top: -5px;
+}
+.img-slider {
+  position: relative;
+  width: 22%;
+  height: 192px;
+}
+.img-slider__main-img {
+  width: 100%;
+  height: 134px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-slider__main-img img {
+  width: 100%;
+  height: 100%;
+}
+.img-slider__pager-img {
+  display: flex;
+}
+.img-slider__item {
+  height: 58px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img-slider__item img {
+  width: 100%;
+  height: 100%;
+}
+.responsive-box {
+  position: relative;
+  width: 30%;
+  /* Произвольная ширина, которая требуется для блока */
+}
+.responsive-box::before {
+  content: "";
+  display: block;
+  padding-top: 56.52%;
+  /* С помощью этого padding мы задаем пропорцию высоты т ширины */
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(images/bg.jpg) no-repeat center center;
+  /* Задаем фон, если требуется */
+  background-size: cover;
+  /* Растягиваем фон под размеры блока, если требуется */
 }
