@@ -1429,6 +1429,108 @@ label {
     //}
 }
 
+.wrapper-shop-category.substrate-for-block{
+    padding: 12px 19px 9px 25px;
+    max-width: 550px;
+}
+.wrapper-shop-category{
+    &__img{
+        margin: 0 auto;
+        position: relative;
+        width: 50%;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__img::before {
+        content: "";
+        display: block;
+        padding-top: 100%; /* С помощью этого padding мы задаем пропорцию высоты т ширины */
+    }
+    &__name{
+        text-transform: uppercase;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 9px;
+    }
+}
+.wrapper-shop-section.main-content__section{
+    margin-top: 24px;
+}
+
+
+.wrapper-product-item{
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 13px;
+    &__col-img{
+        flex-shrink: 0;
+        margin-right: 25px;
+        width: 138px;
+        height: 138px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 7px;
+    }
+    &__description{
+        display: flex;
+        align-items: center;
+    }
+    &__prise{
+        font-size: 12px;
+    }
+    &__full-description{
+        margin-top: 9px;
+    }
+    &__block-button{
+        display: flex;
+        margin-left: auto;
+        margin-top: 41px;
+        .button{
+            padding: 8px;
+        }
+        .button:not(:last-child){
+            margin-right: 26px;
+        }
+    }
+
+    &__col-description{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.wrapper-shop-section{
+    .h3-title{
+        margin-bottom: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .responsive-box {

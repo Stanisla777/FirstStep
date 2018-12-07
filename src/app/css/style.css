@@ -1180,6 +1180,85 @@ label {
   width: 100%;
   height: 100%;
 }
+.wrapper-shop-category.substrate-for-block {
+  padding: 12px 19px 9px 25px;
+  max-width: 550px;
+}
+.wrapper-shop-category__img {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper-shop-category__img::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* С помощью этого padding мы задаем пропорцию высоты т ширины */
+}
+.wrapper-shop-category__name {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 9px;
+}
+.wrapper-shop-section.main-content__section {
+  margin-top: 24px;
+}
+.wrapper-product-item {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 13px;
+}
+.wrapper-product-item__col-img {
+  flex-shrink: 0;
+  margin-right: 25px;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper-product-item__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.wrapper-product-item__description {
+  display: flex;
+  align-items: center;
+}
+.wrapper-product-item__prise {
+  font-size: 12px;
+}
+.wrapper-product-item__full-description {
+  margin-top: 9px;
+}
+.wrapper-product-item__block-button {
+  display: flex;
+  margin-left: auto;
+  margin-top: 41px;
+}
+.wrapper-product-item__block-button .button {
+  padding: 8px;
+}
+.wrapper-product-item__block-button .button:not(:last-child) {
+  margin-right: 26px;
+}
+.wrapper-product-item__col-description {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-shop-section .h3-title {
+  margin-bottom: 9px;
+}
 .responsive-box {
   position: relative;
   width: 30%;
