@@ -1075,3 +1075,32 @@ label {
   margin-top: auto;
   margin-right: 15px;
 }
+.wrapper-blog {
+  background-color: rgba(232, 232, 232, 0.5);
+  border-radius: 5px;
+}
+.wrapper-blog__header {
+  display: flex;
+  padding: 13px 18px 13px 18px;
+  border-bottom: 1px solid #ffffff;
+}
+.wrapper-blog__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrapper-blog__admin {
+  display: flex;
+}
+.wrapper-admin {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  max-width: 290px;
+  min-width: 160px;
+  position: fixed;
+  top: 12px;
+  right: 66px;
+  z-index: 2;
+}

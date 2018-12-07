@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#ffffff">
+    <title> </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/FontAwesoome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+
+
+</head>
+<body class="single-page">
+
+<section class="page-content">
+
+
+
+            <nav class="left-site-bar">
+                <a href="#" class="site-logo"></a>
+
+                <ul class="left-site-bar__list">
+                    <li class="left-site-bar__item"><a href="#">О МЕТОДИКЕ</a></li>
+                    <li class="left-site-bar__item"><a href="#">ОБ АВТОРАХ</a></li>
+                    <li class="left-site-bar__item"><a href="#">ОТЗЫВЫ</a></li>
+                    <li class="left-site-bar__item"><a href="#">СЕМИНАРЫ</a></li>
+                    <li class="left-site-bar__item"><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+
+                <div class="wrapper-social-icon">
+                    <a href="#" class="social-icon__item social-icon__vk"></a>
+                    <a href="#" class="social-icon__item social-icon__fb"></a>
+                    <a href="#" class="social-icon__item social-icon__od"></a>
+                    <a href="#" class="social-icon__item social-icon__yt"></a>
+                    <a href="#" class="social-icon__item social-icon__in"></a>
+                </div>
+            </nav>
+
+            <div class="wrapper-admin">
+
+                <div class="wrapper-admin__content">
+                    <p class="wrapper-admin__name">Аленушка</p>
+                    <p class="wrapper-admin__balance">Баланс: <span>00,0</span> дерев.</p>
+                </div>
+                <div style="background-image: url('img/alen.jpg')" class="wrapper-admin__foto"></div>
+            </div>
+
+
+            <div class="main-content">
+                <nav class="main-site-bar">
+                    <ul class="main-site-bar__list">
+                        <li class="main-site-bar__item main-site-bar__item_main"><a href="#">ГЛАВНАЯ</a></li>
+                        <li class="main-site-bar__item main-site-bar__item_shop"><a href="#">МАГАЗИН</a></li>
+                        <li class="main-site-bar__item main-site-bar__item_trainers"><a href="#">ТРЕНЕРЫ</a></li>
+                        <li class="main-site-bar__item main-site-bar__item_blog"><a href="#">БЛОГ</a></li>
+                    </ul>
+                </nav>
+
+                <h1 class="title">БЛОГ</h1>
+
+                <div class="wrapper-blog">
+                    <div class="wrapper-blog__header">
+                        <h2 class="wrapper-blog__title">КАК Я СЪЕЛ СОБАКУ</h2>
+                        <div class="wrapper-blog__admin">
+                            <div class="wrapper-admin__content">
+                                <p class="wrapper-admin__name">Агафья</p>
+                                <p class="wrapper-admin__balance">Баланс: <span>00,0</span> дерев.</p>
+                            </div>
+                            <div style="background-image: url('img/agaf.jpg')" class="wrapper-admin__foto"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        // $(window).resize(function(){
+        //     site_bar();
+        // });
+        //
+        // function site_bar(){
+        //     if ($(window).width()<=1630){
+        //         var el_ul = $('.left-site-bar__list').width();
+        //         $('.left-site-bar__list').css('marginLeft',-el_ul/2);
+        //     }
+        // }
+        // site_bar();
+
+
+
+
+
+
+        $('.owl-carousel').owlCarousel({
+//                loop:true, //Зацикливаем слайдер
+            margin:30, //Отступ от элемента справа в 50px
+            dots:false,
+            nav:true, //Отключение навигации
+            navText : ['',''],
+            items:4,
+               responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                   0:{
+                       items:1,
+                       nav:false,
+                       dots:true
+                   },
+                   480:{
+                       items:2
+                   },
+                   670:{
+                       items:3
+                   },
+                   920:{
+                       items:4
+                   }
+               }
+
+            // onInitialized: function(){
+            //
+            //     $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
+            //
+            // }
+        });
+
+
+
+    })
+
+
+</script>
+
+
+
+
+</body>
+</html>
