@@ -97,6 +97,34 @@
         width: calc(100% - 30px);
     }
 }
+
+
+@media screen and (max-width: 690px) {
+    .wrapper-blog__content{
+        flex-direction: column;
+    }
+    .img-slider{
+        margin: 0 auto 20px;
+    }
+    .wrapper-blog__content {
+        padding: 18px 10px 10px 10px;
+    }
+    .wrapper-blog__header {
+        padding: 12px 12px 4px 18px;
+    }
+    .wrapper-blog__title {
+        font-size: 16px;
+    }
+    .wrapper-blog__admin-content{
+        font-size: 12px;
+    }
+    .wrapper-blog p {
+        line-height: 15px;
+    }
+
+}
+
+
 @media screen and (max-width: 670px) {
     .left-site-bar__list a {
         font-size: 9px;

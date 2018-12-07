@@ -1106,6 +1106,7 @@ label {
   line-height: 21px;
 }
 .wrapper-blog__foto {
+  flex-shrink: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1152,6 +1153,7 @@ label {
 .img-slider {
   position: relative;
   width: 22%;
+  min-width: 220px;
   height: 192px;
 }
 .img-slider__main-img {
