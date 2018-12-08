@@ -67,6 +67,39 @@
     .substrate-for-authors {
         padding: 20px 20px 43px 20px;
     }
+
+    .trainers-detail__icon i {
+        font-size: 160px;
+    }
+    .trainers-detail__status {
+        font-size: 25px;
+    }
+    .trainers-detail__prop {
+        font-size: 14px;
+    }
+    .trainers-detail__description {
+        width: calc(100% - 45% - 20px);
+    }
+
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .trainers-detail__row {
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+
+    .trainers-detail__col-right {
+        width: calc(100% - 67%);
+        order: -1;
+        margin: 0px auto 20px;
+    }
+
+    .trainers-detail__col-left{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 800px) {
     .row-two-column__col-authors {
@@ -154,6 +187,22 @@
     }
 
 
+}
+@media screen and (max-width: 600px) {
+    .trainers-detail__col-left{
+        flex-direction: column;
+        align-items: center;
+    }
+    .trainers-detail__img{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .trainers-detail__prop:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .trainers-detail__description {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 560px) {
     .main-site-bar__item a {

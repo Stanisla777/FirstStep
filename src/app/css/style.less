@@ -1520,13 +1520,87 @@ label {
 
 
 
+//Тренры детальная
+.trainers-detail{
+    padding: 30px 10px 10px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    &__row{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col-left{
+        display: flex;
+        align-items: flex-start;
+        width: 67%;
+    }
+    &__img{
+        position: relative;
+        width: 45%;
+        border-radius: 5px;
+        max-width: 331px;
+        min-width: 210px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 20px;
+    }
+    &__img:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    &__description{
+        width: 38%;
+    }
+    &__prop-val{
+        display: flex;
+    }
+    &__prop{
+        span{
+            text-transform: none;
+        }
+        text-transform: uppercase;
+        font-size: 16px;
+        text-align: center;
+    }
+    &__val{
+        font-size: 16px;
+    }
+    &__prop:not(:last-child){
+        margin-bottom: 27px;
+    }
+
+    &__col-right{
+        width: calc(100% - 67%);
+    }
+    &__icon{
+        color: #ff8100;
+        text-align: center;
+        i{
+            font-size: 220px;
+
+        }
+
+    }
+    &__status{
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: bold;
+        //margin-top: 21px;
+    }
+    &__trainer-name{
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 14px 0 10px;
+    }
+    &__about-trainer{
+        line-height: 16px;
+    }
 
 
 
-
-
-
-
+}
 
 
 
