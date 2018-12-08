@@ -20,6 +20,7 @@ const config = {
         css:'/app/css',
         watch:'/app/css/*.less',
         src: '/app/css/style.less',
+        src_css: '/app/css/style.css',
         img: '/app/img',
         dist: '/dist/css'
     },
@@ -94,11 +95,28 @@ gulp.task('build-all', function () {
 
 ////////////////////////////////////////////////////////
 
-
+// const config = {
+//     src: './src',
+//     app:'/app',
+//     css: {
+//         css:'/app/css',
+//         watch:'/app/css/*.less',
+//         src: '/app/css/style.less',
+//         src_css: '/app/css/style.css',
+//         img: '/app/img',
+//         dist: '/dist/css'
+//     },
+//     html: {
+//         src: '/app/*.html',
+//         src_dist: '/dist'
+//
+//
+//     }
+// };
 
 //Автопрефиксы
 gulp.task('autoprefixer', function () {
-    gulp.src('./src/app/css/**/*.css')//выборка файлов по конкретному пути
+    gulp.src(config.src+config.css.src_css)//выборка файлов по конкретному пути
 
         //даем префиксы стилям
         .pipe(autoprefixer({
@@ -106,7 +124,7 @@ gulp.task('autoprefixer', function () {
             cascade: false
         }))
 
-        .pipe(gulp.dest('./src/dist/css')); //вывод результирующего файла в папку назначения (dest — пункт назначения)
+        .pipe(gulp.dest(config.src+config.html.src_dist)); //вывод результирующего файла в папку назначения (dest — пункт назначения)
 
 });
 
