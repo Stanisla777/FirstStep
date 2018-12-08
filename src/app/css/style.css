@@ -1155,6 +1155,7 @@ label {
   width: 22%;
   min-width: 220px;
   height: 192px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .img-slider__main-img {
   width: 100%;
@@ -1171,6 +1172,7 @@ label {
   display: flex;
 }
 .img-slider__item {
+  width: 33.33333333%;
   height: 58px;
   background-size: cover;
   background-position: center;
@@ -1180,9 +1182,15 @@ label {
   width: 100%;
   height: 100%;
 }
-.wrapper-shop-category.substrate-for-block {
+.row-two-column-product {
+  justify-content: flex-start;
+}
+.product-category {
   padding: 12px 19px 9px 25px;
   max-width: 550px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 .wrapper-shop-category__img {
   margin: 0 auto;
@@ -1246,21 +1254,27 @@ label {
   margin-left: auto;
   margin-top: 41px;
 }
-.wrapper-product-item__block-button .button {
-  padding: 8px;
-}
 .wrapper-product-item__block-button .button:not(:last-child) {
-  margin-right: 26px;
+  margin-right: 17px;
 }
 .wrapper-product-item__col-description {
   display: flex;
   flex-direction: column;
 }
+.wrapper-product-item__btn-more {
+  padding: 8px 8px;
+}
+.wrapper-product-item__btn-busket {
+  padding: 4px 11px;
+}
+.wrapper-product-item__btn-busket i {
+  font-size: 20px;
+}
 .wrapper-shop-section .h3-title {
   margin-bottom: 9px;
 }
 .trainers-detail {
-  padding: 30px 10px 10px 30px;
+  padding: 30px 30px 20px 30px;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -1325,32 +1339,26 @@ label {
   font-weight: bold;
 }
 .trainers-detail__trainer-name {
-  text-transform: uppercase;
   font-size: 20px;
   margin: 14px 0 10px;
 }
 .trainers-detail__about-trainer {
   line-height: 16px;
 }
-.responsive-box {
-  position: relative;
-  width: 30%;
-  /* Произвольная ширина, которая требуется для блока */
+.wrapper-title-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.responsive-box::before {
-  content: "";
-  display: block;
-  padding-top: 56.52%;
-  /* С помощью этого padding мы задаем пропорцию высоты т ширины */
+.wrapper-title-page__tab {
+  display: flex;
 }
-.content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: url(images/bg.jpg) no-repeat center center;
-  /* Задаем фон, если требуется */
-  background-size: cover;
-  /* Растягиваем фон под размеры блока, если требуется */
+.tab-item a {
+  text-transform: lowercase;
+  font-size: 19px;
+  color: #445485;
+  padding: 5px 6px;
+}
+.item-active a {
+  color: #fff;
 }
