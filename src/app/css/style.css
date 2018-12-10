@@ -1371,3 +1371,6 @@ label {
 .item-active a {
   color: #fff;
 }
+.container-blog:not(:last-child) {
+  display: none;
+}
