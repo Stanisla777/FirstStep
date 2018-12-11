@@ -1370,3 +1370,6 @@ label {
 .item-active a {
   color: #fff;
 }
+.video_banner {
+  padding: 0;
+}
