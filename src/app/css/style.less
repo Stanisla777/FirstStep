@@ -853,7 +853,18 @@ label {
 .lihe-height p {
     line-height: 17px;
 }
+/*Плашки блоов*/
 .substrate-for-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+}
+.substrate-for-authors {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 4px 43px 20px;
+    border-radius: 5px;
+}
+.substrate-for-detail-product {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px 20px 20px;
     border-radius: 5px;
@@ -863,6 +874,7 @@ label {
     padding: 20px 20px 20px;
     border-radius: 5px;
 }
+/*//////////////////////////////////////////////*/
 .found-block p {
     text-align: justify;
     line-height: 17px;
@@ -1041,11 +1053,7 @@ label {
 .icon-list p {
     font-size: 14px;
 }
-.substrate-for-authors {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px 4px 43px 20px;
-    border-radius: 5px;
-}
+
 .substrate-authors {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1616,3 +1624,81 @@ li.tab-item:not(:last-child) {
     margin-left: auto;
     margin-top: 30px;
 }
+
+/*Страница продукты детальная*/
+
+.product-name-title{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.main-content__section {
+    background-color: rgba(232, 232, 232, 0.5);
+    margin-top: 24px;
+    padding: 10px 10px 15px;
+    border-radius: 5px;
+}
+.main-content__det-product{
+    padding: 16px 10px 15px 15px;
+}
+
+.wrapper-product-order{
+    display: flex;
+}
+.product-order{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrap-price{
+        font-size: 50px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 52px;
+    }
+    &__number-choice{
+        display: flex;
+        margin-top: 26px;
+    }
+    &__wrapper-counting{
+        //padding: 3px 8px;
+        border-radius: 2px;
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        background-color: #0187de;
+    }
+    &__sign{
+        width: 29px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+           color: #fff;
+        }
+        cursor: pointer;
+    }
+    &__count{
+        p{
+            font-size: 20px;
+        }
+        //margin: 0 10px;
+        width: 40px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+

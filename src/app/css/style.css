@@ -846,7 +846,18 @@ label {
 .lihe-height p {
   line-height: 17px;
 }
+/*Плашки блоов*/
 .substrate-for-block {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+}
+.substrate-for-authors {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 4px 43px 20px;
+  border-radius: 5px;
+}
+.substrate-for-detail-product {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 20px 20px;
   border-radius: 5px;
@@ -856,6 +867,7 @@ label {
   padding: 20px 20px 20px;
   border-radius: 5px;
 }
+/*//////////////////////////////////////////////*/
 .found-block p {
   text-align: justify;
   line-height: 17px;
@@ -1033,11 +1045,6 @@ label {
 }
 .icon-list p {
   font-size: 14px;
-}
-.substrate-for-authors {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 4px 43px 20px;
-  border-radius: 5px;
 }
 .substrate-authors {
   display: -webkit-box;
@@ -1595,4 +1602,68 @@ li.tab-item:not(:last-child) {
   padding: 8px 8px;
   margin-left: auto;
   margin-top: 30px;
+}
+/*Страница продукты детальная*/
+.product-name-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.main-content__section {
+  background-color: rgba(232, 232, 232, 0.5);
+  margin-top: 24px;
+  padding: 10px 10px 15px;
+  border-radius: 5px;
+}
+.main-content__det-product {
+  padding: 16px 10px 15px 15px;
+}
+.wrapper-product-order {
+  display: flex;
+}
+.product-order {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-order__wrap-price {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 52px;
+}
+.product-order__number-choice {
+  display: flex;
+  margin-top: 26px;
+}
+.product-order__wrapper-counting {
+  border-radius: 2px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  background-color: #0187de;
+}
+.product-order__sign {
+  width: 29px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.product-order__sign i {
+  color: #fff;
+}
+.product-order__count {
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-order__count p {
+  font-size: 20px;
 }
