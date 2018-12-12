@@ -44,8 +44,7 @@ html {
 /*.page-content:before{*/
 /**/
 /*}*/
-
-.page-content:before{
+.page-content:before {
   content: "";
   display: block;
   position: fixed;
@@ -442,7 +441,7 @@ label {
   height: 30px;
 }
 .social-icon__item {
-  color:#fff;
+  color: #fff;
 }
 .social-icon__item:before {
   font-family: 'FontAwesoome', sans-serif;
@@ -543,14 +542,8 @@ label {
   -ms-flex-align: center;
   align-items: center;
 }
-
 .main-site-bar__item a {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
@@ -569,7 +562,7 @@ label {
   font-family: 'FontAwesoome', sans-serif;
   margin-right: 6px;
 }
-.main-site-bar__item a{
+.main-site-bar__item a {
   text-transform: uppercase;
   color: #fff;
   font-size: 16px;
@@ -1422,6 +1415,8 @@ label {
   padding: 30px 30px 20px 30px;
   background-color: #fff;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .trainers-detail__row {
   display: -webkit-box;
@@ -1525,17 +1520,16 @@ label {
 .item-active a {
   color: #fff;
 }
-
-
+.container-blog:not([data-type='all']) {
+  display: none;
+}
 .unauth-menu {
   display: flex;
   padding-top: 47px;
 }
-
 .unauth-menu li {
   margin-right: 5px;
 }
-
 .unauth-menu li a {
   text-transform: uppercase;
   color: #fff;
@@ -1545,28 +1539,24 @@ label {
 .wrapper-admin__name a {
   color: #fff;
 }
-
 .modal-background {
   z-index: 1000;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
-
 .hide-modal {
   display: none!important;
 }
-
 .modal-background {
   z-index: 1010;
 }
 .site-modal.closed {
   display: none!important;
 }
-
 .site-modal {
   display: flex;
   position: fixed;
@@ -1589,8 +1579,15 @@ label {
   /* разрешим скролить */
   overflow: auto;
 }
-
-
 /* VERSION 2 */
-
-
+.main-content__section-mar-0 {
+  background-color: rgba(232, 232, 232, 0.5);
+  margin-top: 0;
+  padding: 10px 10px 15px;
+  border-radius: 5px;
+}
+.trainers-detail__btn-back {
+  padding: 8px 8px;
+  margin-left: auto;
+  margin-top: 30px;
+}
