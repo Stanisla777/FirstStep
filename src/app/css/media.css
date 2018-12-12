@@ -173,6 +173,24 @@
 
 
 @media screen and (max-width: 670px) {
+    .wrapper-title-page__tab{
+        width: 100%;
+    }
+    li.tab-item:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    .wrapper-title-page{
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .tab-item a{
+        font-size: 15px;
+    }
+    .wrapper-title-page h1.title{
+        margin-bottom: 5px;
+    }
+
     .left-site-bar__list a {
         font-size: 9px;
     }
