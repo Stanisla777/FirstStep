@@ -1718,6 +1718,9 @@ label {
 .wrapper-product-order {
   display: flex;
 }
+.wrapper-product-order .substrate-for-block {
+  padding: 13px 20px 15px 20px;
+}
 .product-order {
   width: 31%;
   margin-right: 20px;
@@ -1726,6 +1729,7 @@ label {
   align-items: center;
 }
 .product-order__wrap-price {
+  margin-top: 8px;
   font-size: 50px;
   text-align: center;
   font-weight: 500;
@@ -1785,7 +1789,7 @@ label {
 .product-slider__item:before {
   content: "";
   display: block;
-  padding-top: 100%;
+  padding-top: 97%;
 }
 .product-slider .owl-nav .owl-next {
   right: -80px;
@@ -1794,7 +1798,7 @@ label {
   left: -80px;
 }
 .product-description {
-  padding: 17px 20px 20px 8px;
+  padding: 3px 20px 20px 8px;
 }
 /*Табы */
 .detail-product-blog {
