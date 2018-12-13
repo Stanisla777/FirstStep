@@ -21,34 +21,34 @@
 <section class="page-content">
 
 
-    <nav class="left-site-bar">
-        <a href="#" class="site-logo"></a>
+    <!--<nav class="left-site-bar">-->
+        <!--<a href="#" class="site-logo"></a>-->
 
-        <ul class="left-site-bar__list">
-            <li class="left-site-bar__item"><a href="#">О МЕТОДИКЕ</a></li>
-            <li class="left-site-bar__item"><a href="#">ОБ АВТОРАХ</a></li>
-            <li class="left-site-bar__item"><a href="#">ОТЗЫВЫ</a></li>
-            <li class="left-site-bar__item"><a href="#">СЕМИНАРЫ</a></li>
-            <li class="left-site-bar__item"><a href="#">КОНТАКТЫ</a></li>
-        </ul>
+        <!--<ul class="left-site-bar__list">-->
+            <!--<li class="left-site-bar__item"><a href="#">О МЕТОДИКЕ</a></li>-->
+            <!--<li class="left-site-bar__item"><a href="#">ОБ АВТОРАХ</a></li>-->
+            <!--<li class="left-site-bar__item"><a href="#">ОТЗЫВЫ</a></li>-->
+            <!--<li class="left-site-bar__item"><a href="#">СЕМИНАРЫ</a></li>-->
+            <!--<li class="left-site-bar__item"><a href="#">КОНТАКТЫ</a></li>-->
+        <!--</ul>-->
 
-        <div class="wrapper-social-icon">
-            <a href="#" class="social-icon__item social-icon__vk"></a>
-            <a href="#" class="social-icon__item social-icon__fb"></a>
-            <a href="#" class="social-icon__item social-icon__od"></a>
-            <a href="#" class="social-icon__item social-icon__yt"></a>
-            <a href="#" class="social-icon__item social-icon__in"></a>
-        </div>
-    </nav>
+        <!--<div class="wrapper-social-icon">-->
+            <!--<a href="#" class="social-icon__item social-icon__vk"></a>-->
+            <!--<a href="#" class="social-icon__item social-icon__fb"></a>-->
+            <!--<a href="#" class="social-icon__item social-icon__od"></a>-->
+            <!--<a href="#" class="social-icon__item social-icon__yt"></a>-->
+            <!--<a href="#" class="social-icon__item social-icon__in"></a>-->
+        <!--</div>-->
+    <!--</nav>-->
 
-    <div class="wrapper-admin">
+    <!--<div class="wrapper-admin">-->
 
-        <div class="wrapper-admin__content">
-            <p class="wrapper-admin__name">Петрович</p>
-            <p class="wrapper-admin__balance">Баланс: <span>00,0</span> дерев.</p>
-        </div>
-        <div style="background-image: url('img/petr.jpg')" class="wrapper-admin__foto"></div>
-    </div>
+        <!--<div class="wrapper-admin__content">-->
+            <!--<p class="wrapper-admin__name">Петрович</p>-->
+            <!--<p class="wrapper-admin__balance">Баланс: <span>00,0</span> дерев.</p>-->
+        <!--</div>-->
+        <!--<div style="background-image: url('img/petr.jpg')" class="wrapper-admin__foto"></div>-->
+    <!--</div>-->
 
 
             <div class="main-content">
@@ -241,12 +241,54 @@
                         </div>
                     </div>
 
-                    <div class="substrate-for-block wrapper-product-item">
+                    <div class="substrate-for-block substrate-order">
 
                         <form class="wrapper-order-method" action="#" method="post">
                             <div class="payment-method">
                                 <h3 class="order-method__title">Способ оплаты</h3>
+                                <div class="wrapper-radio-button">
+                                    <div class="radio-button">
+                                        <input checked="checked" type="radio" name="payment" value="neyron" id="radio_1">
+                                        <label for="radio_1">neyron</label>
+                                    </div>
+
+                                    <div class="radio-button">
+                                        <input type="radio" name="payment" value="наличными курьеру" id="radio_2">
+                                        <label for="radio_2">наличными курьеру</label>
+                                    </div>
+
+                                    <div class="radio-button">
+                                        <input type="radio" name="payment" value="безналичный расчет" id="radio_3">
+                                        <label for="radio_3">безналичный расчет</label>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="delivery-method">
+                                <h3 class="order-method__title">Способ доставки</h3>
+                                <div class="wrapper-radio-button">
+                                    <div class="radio-button">
+                                        <input checked="checked" type="radio" name="neyron" id="radio_4">
+                                        <label for="radio_4">самовывоз</label>
+                                    </div>
+
+                                    <div class="radio-button">
+                                        <input type="radio" name="neyron" id="radio_5">
+                                        <label for="radio_5">доставка курьером</label>
+                                    </div>
+
+                                    <div class="radio-button">
+                                        <input type="radio" name="neyron" id="radio_6">
+                                        <label for="radio_6">в другой город</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="place-order">
+                                <input type="text" placeholder="ваш промокод...">
+                                <p class="place-order__total">Итого:<span class="place-order__number">973,5</span><span
+                                        class="place-order__currency">neyra</span></p>
+                                <button class="place-order__button"  type="submit">Оформить заказ</button>
+                            </div>
+
                         </form>
 
 
@@ -272,20 +314,21 @@
         var i=1;
         $('.product-order__plus').on('click',function () {
             i+=1;
-            $('.product-order__count p').text(i)
+            $(this).siblings('.product-order__count').find('p').text(i)
         });
-
-
-
 
         $('.product-order__minus').on('click',function () {
             if(i!==0){
                 i-=1;
-                $('.product-order__count p').text(i)
+                $(this).siblings('.product-order__count').find('p').text(i)
             }
-
-
         });
+
+
+        $('.wrapper-order-method input[type="radio"]').each(function (index,el) {
+            $(this).attr('id','radio_'+index);
+            $(this).siblings('label').attr('for','radio_'+index);
+        })
 
     })
 

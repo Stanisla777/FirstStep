@@ -103,8 +103,12 @@
         width: calc(100% - 45% - 20px);
     }
 
+}
 
-
+@media screen and (max-width: 940px) {
+    .place-order{
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -177,6 +181,16 @@
     }
     .modal-window__img{
         margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .wrapper-order-method{
+        flex-direction: column;
+
+    }
+    .payment-method{
         margin-bottom: 20px;
     }
 }
