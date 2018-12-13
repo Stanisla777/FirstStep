@@ -1696,7 +1696,7 @@ li.tab-item:not(:last-child) {
 }
 .modal-window__container {
   position: relative;
-  width: 40%;
+  width: 50%;
   min-width: 350px;
   background: #fff;
 }
@@ -1726,20 +1726,20 @@ li.tab-item:not(:last-child) {
   align-items: flex-start;
 }
 .modal-window__img {
-  margin-right: 10px;
-  position: relative;
-  width: 30%;
-  min-width: 170px;
-  border: 1px solid #e9ecef;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-right: 10px;
+  position: relative;
+  width: 27%;
+  min-width: 190px;
   flex-shrink: 0;
+  border: 1px solid #e9ecef;
 }
 .modal-window__img::before {
   content: "";
   display: block;
-  padding-top: 67%;
+  padding-top: 67.52%;
   /* С помощью этого padding мы задаем пропорцию высоты т ширины */
 }
 .modal-window__footer {
@@ -1754,6 +1754,10 @@ li.tab-item:not(:last-child) {
   border: 1px solid #e9ecef;
   padding: 5px 10px;
   cursor: pointer;
+  outline: none;
+}
+.modal-window__button:hover {
+  box-shadow: 0 0 1px 1px #e9ecef;
 }
 .close-menu {
   position: absolute;
