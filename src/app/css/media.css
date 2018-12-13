@@ -67,6 +67,9 @@
         width: calc(25% - 30px);
         margin-bottom: 10px;
     }
+    .modal-window__container {
+        width: 80%;
+    }
 }
 @media screen and (max-width: 1070px) {
     .about-authors__name {
@@ -142,6 +145,14 @@
     }
     .row-two-column-product{
         justify-content: center;
+    }
+    .modal-window__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-window__img{
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
